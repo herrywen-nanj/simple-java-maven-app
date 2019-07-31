@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'hostname > /root/.m2/1.txt'
                 sh 'mvn -B -DskipTests clean package'
             }
         }
